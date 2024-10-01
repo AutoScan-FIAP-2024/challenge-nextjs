@@ -12,8 +12,13 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        sans: ["Noto Sans", "ui-sans-serif", "system-ui"],
+        mono: ["Geist Mono", "ui-monospace", "monospace"],
+      },
     },
   },
   plugins: [],
 };
+
 export default config;
