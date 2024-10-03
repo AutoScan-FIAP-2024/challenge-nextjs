@@ -15,6 +15,13 @@ const config: Config = {
       fontFamily: {
         sans: ["Noto Sans", "ui-sans-serif", "system-ui"],
         mono: ["Geist Mono", "ui-monospace", "monospace"],
+        bebas: ["Bebas Neue", "sans-serif"]
+      },
+      inset:{
+        '1': '1px'
+      },
+      spacing:{
+        '24': '99px'
       },
     },
   },
