@@ -8,4 +8,8 @@
   .text-balance {
     text-wrap: balance;
   }
+
+  .submit{
+    @apply border border-white w-64 h-9 rounded-md outline-none text-black;
+  }
 }
