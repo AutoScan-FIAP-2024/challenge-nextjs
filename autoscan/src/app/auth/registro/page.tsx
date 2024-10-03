@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import LoginForm from "@/components/login-form";
+import SignupForm from "@/components/signup-form";
 
 export default function Page() {
   return (
@@ -31,13 +32,13 @@ export default function Page() {
             </Link>
             <div
               style={{ marginTop: "-23px" }}
-              className="flex flex-col justify-center items-center font-bebas text-5xl text-black mb-24"
+              className="flex flex-col justify-center items-center font-bebas text-5xl text-black"
             >
               <h1 className="text-7xl">BEM-VINDO</h1>
-              <h2 style={{ marginTop: "-10px" }}>NOVAMENTE!</h2>
             </div>
-            <div className="flex justify-end relative left-1">
-              <img src="/img/car.png" alt="Carro" />
+            <div>
+                <img style={{ marginTop: '-30px' }} 
+                src="/img/woman.png" alt="woman" />
             </div>
           </section>
         </div>
@@ -53,10 +54,10 @@ export default function Page() {
           }}
         >
           <section className="flex justify-center items-center mt-11">
-            <h1 className="font-bebas text-7xl text-white">LOGIN</h1>
+            <h1 className="font-bebas text-7xl text-white">REGISTRAR</h1>
           </section>
           <section>
-            <LoginForm />
+            <SignupForm></SignupForm>
           </section>
         </div>
       </main>
