@@ -17,12 +17,13 @@ const config: Config = {
         mono: ["Geist Mono", "ui-monospace", "monospace"],
         bebas: ["Bebas Neue", "sans-serif"],
         paytone: ["Paytone One", "monospace"],
-        archivo: ["Archivo Narrow", "ui-sans-serif"]
+        archivo: ["Archivo Narrow", "ui-sans-serif"],
+        cinzel: ["Cinzel", "ui-monospace"],
       },
-      inset:{
+      inset: {
         '1': '1px'
       },
-      spacing:{
+      spacing: {
         '24': '99px'
       },
     },
