@@ -17,7 +17,7 @@ export default function Header() {
                 </Link>
               </li>
               <li>
-                <Link href="/sobrenos" className="relative group text-black uppercase text-lg no-underline">
+                <Link href="/sobre-nos" className="relative group text-black uppercase text-lg no-underline">
                   Sobre nós
                   <span className="absolute left-1/2 bottom-0 w-0 h-0.5 bg-black transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0" />
                 </Link>
@@ -29,7 +29,7 @@ export default function Header() {
                 </Link>
               </li>
               <li>
-                <Link href="" className="relative group text-black uppercase text-lg no-underline">
+                <Link href="/auth/login" className="relative group text-black uppercase text-lg no-underline">
                   Atendimento
                   <span className="absolute left-1/2 bottom-0 w-0 h-0.5 bg-black transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0" />
                 </Link>

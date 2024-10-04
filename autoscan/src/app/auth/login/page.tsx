@@ -1,7 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import LoginForm from "@/components/login-form";
+import Link from "next/link";
 
 export default function Page() {
   return (
@@ -36,8 +36,9 @@ export default function Page() {
               <h1 className="text-7xl">BEM-VINDO</h1>
               <h2 style={{ marginTop: "-10px" }}>NOVAMENTE!</h2>
             </div>
-            <div className="flex justify-end relative left-1">
-              <img src="/img/car.png" alt="Carro" />
+            <div className="flex justify-end relative top-2 left-1">
+              <img className="w-5/6"
+                src="/img/car.png" alt="Carro" />
             </div>
           </section>
         </div>

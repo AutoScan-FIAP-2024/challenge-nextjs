@@ -21,7 +21,8 @@ const config: Config = {
         cinzel: ["Cinzel", "ui-monospace"],
       },
       inset: {
-        '1': '1px'
+        '1': '1px',
+        '2': '5px'
       },
       spacing: {
         '24': '99px'
