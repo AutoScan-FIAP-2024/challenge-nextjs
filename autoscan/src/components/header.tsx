@@ -4,10 +4,9 @@ export default function Header() {
   return (
     <div>
       <header className="bg-black text-white">
-        <nav className="max-w-6xl mx-auto flex justify-between items-center p-5">
-          <div className="text-2xl font-bold text-[#605EDB]">
-            AutoScan
-          </div>
+        <nav className="h-20 max-w-6xl mx-auto flex justify-between items-center p-5">
+          <img width={250}
+          src="/img/logo.png" alt="Logo" />
           <ul className="flex space-x-4">
             <li><a href="/" className="hover:text-[#605EDB] transition duration-300">Home</a></li>
             <li><a href="/sobre-nos" className="hover:text-[#605EDB] transition duration-300">Sobre nós</a></li>
