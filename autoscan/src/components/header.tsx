@@ -3,38 +3,16 @@ import Link from "next/link";
 export default function Header() {
   return (
     <div>
-      <header className="font-mono p-6 ml-2">
-        <nav>
-          <ul className="flex items-center ">
-            <Link href='/'>
-              <img className="hover:rotate-180 duration-1000 transition-transform" src="/img/wheellogo.png" alt="Logo" />
-            </Link>
-            <div className="flex space-x-9 ml-8 text-base">
-              <li>
-                <Link href="/auth/login" className="relative group text-black uppercase text-lg no-underline">
-                  Login
-                  <span className="absolute left-1/2 bottom-0 w-0 h-0.5 bg-black transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0" />
-                </Link>
-              </li>
-              <li>
-                <Link href="/sobre-nos" className="relative group text-black uppercase text-lg no-underline">
-                  Sobre nós
-                  <span className="absolute left-1/2 bottom-0 w-0 h-0.5 bg-black transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0" />
-                </Link>
-              </li>
-              <li>
-                <Link href="/auth/registro" className="relative group text-black uppercase text-lg no-underline">
-                  Registrar
-                  <span className="absolute left-1/2 bottom-0 w-0 h-0.5 bg-black transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0" />
-                </Link>
-              </li>
-              <li>
-                <Link href="/auth/login" className="relative group text-black uppercase text-lg no-underline">
-                  Atendimento
-                  <span className="absolute left-1/2 bottom-0 w-0 h-0.5 bg-black transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0" />
-                </Link>
-              </li>
-            </div>
+      <header className="bg-black text-white">
+        <nav className="max-w-6xl mx-auto flex justify-between items-center p-5">
+          <div className="text-2xl font-bold text-[#605EDB]">
+            AutoScan
+          </div>
+          <ul className="flex space-x-4">
+            <li><a href="/" className="hover:text-[#605EDB] transition duration-300">Home</a></li>
+            <li><a href="/sobre-nos" className="hover:text-[#605EDB] transition duration-300">Sobre nós</a></li>
+            <li><a href="/auth/registro" className="hover:text-[#605EDB] transition duration-300">Registrar</a></li>
+            <li><a href="/auth/login" className="hover:text-[#605EDB] transition duration-300">Login</a></li>
           </ul>
         </nav>
       </header>

@@ -4,7 +4,7 @@ export default function page() {
     return (
         <div>
             <Header></Header>
-            <main className="flex flex-col justify-center items-center mb-16">
+            <main className="flex flex-col justify-center items-center mt-10 mb-16">
                 <img className="hover:scale-110 duration-1000 mb-5"
                     width={500} src="/img/imgbook.png" alt="Livro" />
                 <p className="text-center font-cinzel text-2xl max-w-md"
