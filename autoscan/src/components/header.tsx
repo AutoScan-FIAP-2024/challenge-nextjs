@@ -3,18 +3,22 @@ import Link from "next/link";
 export default function Header() {
   return (
     <div>
-      <header className="bg-black text-white">
-        <nav className="h-20 max-w-6xl mx-auto flex justify-between items-center p-5">
-          <img width={250}
-          src="/img/logo.png" alt="Logo" />
-          <ul className="flex space-x-4">
-            <li><a href="/" className="hover:text-[#605EDB] transition duration-300">Home</a></li>
-            <li><a href="/sobre-nos" className="hover:text-[#605EDB] transition duration-300">Sobre nós</a></li>
-            <li><a href="/auth/registro" className="hover:text-[#605EDB] transition duration-300">Registrar</a></li>
-            <li><a href="/auth/login" className="hover:text-[#605EDB] transition duration-300">Login</a></li>
-          </ul>
+      <header className="bg-gray-800 py-4">
+      <div className="container mx-auto flex justify-between items-center">
+        <div className="flex items-center space-x-2"> 
+          <div className=" text-lg font-bold cursor-default
+          w-10 h-10 flex items-center justify-center rounded-full bg-[#354ead] text-gray-800">
+            A
+          </div>
+        </div>
+        <nav className="space-x-8 text-lg">
+          <a href="#" className="text-gray-300 hover:text-white transition duration-300">Home</a>
+          <a href="#" className="text-gray-300 hover:text-white transition duration-300">Sobre nós</a>
+          <a href="#" className="text-gray-300 hover:text-white transition duration-300">Registrar</a>
+          <a href="#" className="text-gray-300 hover:text-white transition duration-300">Login</a>
         </nav>
-      </header>
+      </div>
+    </header>
     </div>
   );
 }
