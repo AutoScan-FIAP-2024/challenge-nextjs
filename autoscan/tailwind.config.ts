@@ -22,10 +22,13 @@ const config: Config = {
       },
       inset: {
         '1': '1px',
-        '2': '5px'
+        '2': '5px',
       },
       spacing: {
-        '24': '99px'
+        '24': '99px',
+      },
+      borderRadius: {
+        'xl': '17px',
       },
     },
   },
