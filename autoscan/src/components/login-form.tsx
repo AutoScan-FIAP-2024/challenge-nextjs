@@ -2,15 +2,39 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
-export default function LoginForm() {
+export default function LoginForm({ setLoading }: { setLoading: (isLoading: boolean) => void }) {
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
+  const [error, setError] = useState<string>('');
+  const router = useRouter();
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log('Email:', email);
-    console.log('Senha:', password);
+    setLoading(true);
+
+    try {
+      const response = await fetch('/api/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+      });
+
+      if (response.ok) {
+        router.push('/dashboard');
+      } else {
+        const result = await response.json();
+        setError(result.message || 'Erro ao fazer login.');
+        setLoading(false);
+      }
+    } catch (err) {
+      console.error('Erro no login:', err);
+      setError('Ocorreu um erro ao fazer login.');
+      setLoading(false);
+    }
   };
 
   return (
@@ -40,6 +64,9 @@ export default function LoginForm() {
           required
         />
       </div>
+
+      {error && <p className="text-red-500 mt-2">{error}</p>}
+
       <div className='flex justify-start w-64'>
         <Link className='hover:underline' href="">Esqueci minha senha</Link>
       </div>

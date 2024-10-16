@@ -2,8 +2,27 @@
 
 import LoginForm from "@/components/login-form";
 import Link from "next/link";
+import { useState } from "react";
+
+function LoadingScreen() {
+  return (
+    <div className="flex justify-center items-center h-screen bg-gray-900">
+      <p className="text-white text-2xl">Carregando...</p>
+    </div>
+  );
+}
 
 export default function Page() {
+  const [loading, setLoading] = useState(false);
+
+  const handleLoading = (isLoading: boolean) => {
+    setLoading(isLoading);
+  };
+
+  if (loading) {
+    return <LoadingScreen />;
+  }
+
   return (
     <div
       className="h-screen flex items-center justify-center"
@@ -37,8 +56,7 @@ export default function Page() {
               <h2 style={{ marginTop: "-10px" }}>NOVAMENTE!</h2>
             </div>
             <div className="flex justify-end relative top-2 left-1">
-              <img className="w-5/6"
-                src="/img/car.png" alt="Carro" />
+              <img className="w-5/6" src="/img/car.png" alt="Carro" />
             </div>
           </section>
         </div>
@@ -57,7 +75,7 @@ export default function Page() {
             <h1 className="font-bebas text-7xl text-white">LOGIN</h1>
           </section>
           <section>
-            <LoginForm />
+            <LoginForm setLoading={handleLoading} /> {/* Passa o callback de loading */}
           </section>
         </div>
       </main>
